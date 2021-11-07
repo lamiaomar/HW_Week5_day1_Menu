@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item android:id="@+id/action_switch_layout"
+            android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+            app:showAsAction="never"
+            android:title="@string/contactUs" />
+
+    <item android:id="@+id/action_switch_layout2"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        app:showAsAction="never"
+        android:title="@string/Setting" />
+
+    <item android:id="@+id/action_switch_layout3"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        app:showAsAction="never"
+        android:title="@string/logIn" />
+
+    </menu>
