@@ -10,8 +10,5 @@ class setting : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting)
 
-        val sett = intent?.extras?.getString("setting").toString()
-        val text : TextView = findViewById(R.id.textView)
-        text.text = sett
     }
 }

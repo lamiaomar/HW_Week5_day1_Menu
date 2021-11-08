@@ -41,14 +41,11 @@ class MainActivity : AppCompatActivity() {
                     context.startActivity(intent)
                  */
                 val intent = Intent(this , setting::class.java)
-                intent.putExtra("setting" , R.string.Setting.toString())
                 this.startActivity(intent)
                 true
             }
             R.id.action_switch_layout -> {
                 val intent = Intent(this , contact::class.java)
-                intent.putExtra("con" , R.string.contactUs)
-
                 this.startActivity(intent)
                 true
             }

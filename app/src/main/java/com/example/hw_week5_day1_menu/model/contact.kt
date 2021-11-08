@@ -10,9 +10,5 @@ class contact : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact)
 
-        val sett = intent?.extras?.getString("con").toString()
-        val text : TextView = findViewById(R.id.textView2)
-        text.text = sett
-
     }
 }
