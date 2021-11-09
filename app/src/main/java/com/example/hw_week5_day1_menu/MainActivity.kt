@@ -7,13 +7,14 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hw_week5_day1_menu.model.contact
 import com.example.hw_week5_day1_menu.model.setting
-
+var x = true
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private var isLinearLayoutManager = true
@@ -27,11 +28,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.layout_manu, menu)
+
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle item selection
+
         return when (item.itemId) {
             R.id.action_switch_layout2 -> {
                 /*
@@ -49,13 +51,33 @@ class MainActivity : AppCompatActivity() {
                 this.startActivity(intent)
                 true
             }
+
             R.id.action_switch_layout3 -> {
-                if(item.title == "Log In") item.title = "Log Out"
-                else if (item.title == "Log Out") item.title = "Log In"
                 true
             }
+            R.id.action_switch_layout4 -> {
+                true
+            }
+
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu? ): Boolean {
+
+       var login =  menu?.findItem(R.id.action_switch_layout3)
+       var logout = menu?.findItem(R.id.action_switch_layout4)
+
+        if(x)
+        { x =! x
+            logout?.setVisible(true)
+            login?.setVisible(false) }
+
+        else  { x =! x
+            login?.setVisible(true)
+            logout?.setVisible(false) }
+
+        return super.onPrepareOptionsMenu(menu)
     }
 
     }
